@@ -1,0 +1,6 @@
+MAVEN GOALS:
+	1) mvn clean: deleta o diretorio target e qualquer outro recurso gerado
+	2) mvm compile: compila todo codigo fonte, gera qqr arquivo para uso de webserver, copia recursos nos diretorios de classe (ex: .properties e etc)
+	3) mvn package: executa o compile primeiro, depois executa os testes e depois empacota a aplicacao baseado no modo de empacotamento definido no pom.
+	4) mvn install: executa o comando package e copia o artefato para o seu repositorio local
+	5) mvn deploy: executa o comando install e copia o artefato para o repositorio corporativo (remoto)
