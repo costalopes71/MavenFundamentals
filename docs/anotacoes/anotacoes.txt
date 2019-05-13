@@ -4,3 +4,14 @@ MAVEN GOALS:
 	3) mvn package: executa o compile primeiro, depois executa os testes e depois empacota a aplicacao baseado no modo de empacotamento definido no pom.
 	4) mvn install: executa o comando package e copia o artefato para o seu repositorio local
 	5) mvn deploy: executa o comando install e copia o artefato para o repositorio corporativo (remoto)
+
+Estrutura do arquivo POM.xml
+
+	1) Project : onde ficam as informacoes do projeto
+		- artifactId
+		- groupId
+		- version
+		-
+	2) Dependencies
+	3) Build
+	4) 
