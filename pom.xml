@@ -33,7 +33,55 @@
             <version>4.1.6.Final</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.2.0.BUILD-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
+
+    <!-- REPOSITORIOS -->
+    <repositories>
+
+        <!-- Essa tag permite que eu ponho outros repositorios para os artefatos serem procurados alem do default (maven repo) -->
+
+        <repository>
+
+            <id>spring-snapshot</id>
+            <name>Spring Maven SNAPSHOT Repository</name>
+            <url>http://repo.springsource.org/libs-snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+
+        </repository>
+
+    </repositories>
+
+    <!-- REPOSITORIOS DE PLUGINS -->
+    <pluginRepositories>
+
+        <!-- Essa tag permite que eu ponha outros repositorios para os plugins a serem procurados -->
+
+        <pluginRepository>
+
+            <id>acme corp</id>
+            <name>Acme Internal Corporate Repository</name>
+            <url>http://acmecorp.com/plugins</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+
+        </pluginRepository>
+
+    </pluginRepositories>
 
     <!-- BUILD -->
     <build>
