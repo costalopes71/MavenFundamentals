@@ -1,9 +1,12 @@
 MAVEN GOALS:
 	1) mvn clean: deleta o diretorio target e qualquer outro recurso gerado
 	2) mvm compile: compila todo codigo fonte, gera qqr arquivo para uso de webserver, copia recursos nos diretorios de classe (ex: .properties e etc)
+	3) mvn test: roda os testes
 	3) mvn package: executa o compile primeiro, depois executa os testes e depois empacota a aplicacao baseado no modo de empacotamento definido no pom.
 	4) mvn install: executa o comando package e copia o artefato para o seu repositorio local
 	5) mvn deploy: executa o comando install e copia o artefato para o repositorio corporativo (remoto)
+	
+	Esses goals sao definidos no super pom (pom do maven que ja vem na instalacao)
 
 Estrutura do arquivo POM.xml
 
@@ -15,3 +18,16 @@ Estrutura do arquivo POM.xml
 	2) Dependencies
 	3) Build
 	4) 
+
+PHASES:
+
+	1) validate: valida se o projeto esta correto e tem toda informacao que necessita
+	2) compile: fase de compilacao, aqui apenas o source code eh compilado, o codigo de teste nao
+	3) test: fase de teste. O codigo de teste eh compilado nessa fase e os testes sao rodados.
+	4) package: fase de empacotamento de todo o codigo conforme definido no pom (jar, war, pom, etc)
+	5) integration-test: faz o deploy e roda os testes de integracao
+	6) verify: executa checagem no artefato para ver se sua integridade esta ok
+	7) install: joga o artefato para o repositorio local
+	8) deploy: copia o artefato para o repositorio remoto
+
+
